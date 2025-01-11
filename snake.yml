@@ -1,1 +1,20 @@
+name: GitHub Snake
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Generate Snake GIF
+        uses: platane/github-contribution-grid-snake@v2
+        with:
+          github_user: margret255
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
